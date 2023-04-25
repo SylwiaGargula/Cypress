@@ -9,7 +9,8 @@ class todoApp {
         clearCompleted: () => cy.get('#clear-completed'),
         appName : () => cy.get('header.card'),
         appFooter : () => cy.get('footer > p'),
-        list : () => cy.get('[data-cy="todo"]')
+        list : () => cy.get('[data-cy="todo"]'),
+        removeIcon : () => cy.get('.clear').invoke('show')
     }
 
     createItem(names) {
@@ -27,10 +28,10 @@ class todoApp {
     }
 
     showCompletedItems() {
-        this.elements.completedItems.click()
+        this.elements.completedItems().click()
     }
 
-    checkCounter(number) {
+    checkLeftCounter(number) {
         this.elements.counter().should('have.text', number + ' items left')
     }
 
@@ -50,8 +51,17 @@ class todoApp {
     findItem(name) {
         this.elements.list().find(name)
     }
+
     markAsCompleted(index) {
         cy.get(':nth-child(' + index + ') > .cb-container > .cb-input').click()
+    }
+
+    removeItem() {
+        this.elements.removeIcon().click({ force: true })
+    }
+
+    getItem(index) {
+        cy.get('.todos > :nth-child(' + index + ')')
     }
 }
 
