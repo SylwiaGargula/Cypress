@@ -3,3 +3,9 @@ node_modules
 
 # Ignore package-lock file
 package-lock.json
+
+# Ignore videos folder
+/videos
+
+# Ignore download folder
+/downloads
