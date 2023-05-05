@@ -73,7 +73,17 @@ describe( "Todo Application", () => {
     })
 
     it.only('User changes order of elements', () => {
-    
+        const names = ['first','second']
+        todoApp.createItem(names)
+        todoApp.checkLeftCounter(2)
+     //  cy.get('.todos > :nth-child(1)').trigger('mousedown');
+
+       cy.get('.todos > :nth-child(1)')
+      .trigger('mousedown')
+      .trigger('mousemove', { clientX: 30, clientY: 30 })
+      .trigger('mouseup', { force: true })
+       
+ 
     })
 })
 
