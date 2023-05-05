@@ -5,17 +5,16 @@ node_modules
 package-lock.json
 
 # Ignore videos folder
-/videos
+cypress/videos
 
 # Ignore download folder
-/downloads
+cypress/downloads
 
 # Ignore screenshots
-/screenshots
+cypress/screenshots
 
 # Ignore fixtures
-/fixtures/data.json
+cypress/fixtures/data.json
 
 # Ignore cypress.config
-/cypress.config.js
-
+cypress.config.js
