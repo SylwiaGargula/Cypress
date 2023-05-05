@@ -9,3 +9,13 @@ package-lock.json
 
 # Ignore download folder
 /downloads
+
+# Ignore screenshots
+/screenshots
+
+# Ignore fixtures
+/fixtures/data.json
+
+# Ignore cypress.config
+/cypress.config.js
+
