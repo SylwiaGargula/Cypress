@@ -15,6 +15,3 @@ cypress/screenshots
 
 # Ignore fixtures
 cypress/fixtures/data.json
-
-# Ignore cypress.config
-cypress.config.js
