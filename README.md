@@ -1,4 +1,4 @@
-**How to run tests
+### How to run tests
 1. Add data.json file:
 ```
 {
